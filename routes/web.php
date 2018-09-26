@@ -11,6 +11,13 @@
 |
 */
 
+Route::resource('companies','CompanyController');
+Route::get('login', ['as' => 'login', 'uses' => 'auth\LoginController@getView']);
+
 Route::get('/', function () {
     return view('home');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

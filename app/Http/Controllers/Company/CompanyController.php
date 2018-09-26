@@ -1,13 +1,16 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Models\Company;
 use App\Repositories\CompanyRepository;
+
 class CompanyController extends Controller {
     /**
      * The Company repository instance
-     * 
+     *
      * @var CompanyRepository
      */
     protected $companies;
@@ -48,7 +51,7 @@ class CompanyController extends Controller {
     }
     /**
      * Display an Company
-     * 
+     *
      * @param type $id
      * @return type
      */
@@ -79,7 +82,7 @@ class CompanyController extends Controller {
     }
     /**
      * Delete an Company
-     * 
+     *
      * @param type $id
      * @return \Illuminate\Http\Response
      */
