@@ -1,7 +1,9 @@
 <?php
+
 namespace App\Repositories;
 use App\Models\Company;
 use App\Interfaces\CompanyInterface;
+
 class CompanyRepository implements CompanyInterface {
     public function getAll() {
         return Company::all();

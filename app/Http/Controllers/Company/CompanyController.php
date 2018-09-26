@@ -21,6 +21,7 @@ class CompanyController extends Controller {
      */
     public function __construct() {
         $this->middleware('auth');
+        $this->companies = new CompanyRepository();
     }
     /**
      * Display a list of all companies.

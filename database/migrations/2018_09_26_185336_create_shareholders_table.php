@@ -17,8 +17,8 @@ class CreateShareHoldersTable extends Migration
             $table->increments('id');
             $table->string('firstname');
             $table->string('lastname');
-            $table->string('email');
-            $table->string('mobile');
+            $table->string('email')->nullable();;
+            $table->string('mobile')->nullable();;
             $table->timestamps();
         });
     }
