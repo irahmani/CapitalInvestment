@@ -16,7 +16,7 @@
         <th>Name</th>
         <th>VAT</th>
         <th>Capital</th>
-        <th>Shares</th>
+        <th>Owner</th>
         <th colspan="2">Action</th>
       </tr>
     </thead>
@@ -28,7 +28,7 @@
         <td class="align-middle">{{$company['name']}}</td>
         <td class="align-middle">{{$company['vat']}}</td>
         <td class="align-middle text-right">kr. {{$company['capital']}}</td>
-        <td class="align-middle text-center">{{$company['shares']}} %</td>
+        <td class="align-middle text-center">{{$company['owner_id']}} %</td>
         <td class="align-middle"><a href="{{action('CompanyController@edit', $company['id'])}}" class="btn btn-warning">Edit</a></td>
         <td class="align-middle">
           <form action="{{action('CompanyController@destroy', $company['id'])}}" method="post">

@@ -16,7 +16,7 @@ class CreateCompanyOwnersTable extends Migration
         Schema::create('company_owners', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('company_id');
-            $table->integer('person_id');
+            $table->integer('Shareholder_id');
             $table->timestamps();
         });
     }

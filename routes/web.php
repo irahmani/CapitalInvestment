@@ -12,6 +12,8 @@
 */
 
 Route::resource('companies','CompanyController');
+Route::resource('shareholders','ShareholderController');
+
 Route::get('login', ['as' => 'login', 'uses' => 'auth\LoginController@getView']);
 
 Route::get('/', function () {

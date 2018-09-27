@@ -18,7 +18,8 @@ class Company extends BaseModel
 
     protected $attributes = [
         'logo' => '/images/avatar/Logo_avatar.png',
-        'shares' => 0
+        'shares' => 0,
+        'owner_id' => 1
     ];
 
     //

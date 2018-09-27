@@ -4,9 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Share extends Model
+class Shareholder extends BaseModel
 {
     protected $fillable = [
-        'company_id', 'share_type', 'person_id', 'share'
+        'firstname', 'lastname', 'email', 'mobile'
     ];
+
 }

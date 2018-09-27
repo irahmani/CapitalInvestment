@@ -20,4 +20,12 @@ class CompanyRepository implements CompanyInterface {
     public function find($id) {
         return Company::find($id);
     }
+
+    public function addShare($id) {
+        return Company::find($id);
+    }
+
+    public function totalCapital($id) {
+        return Company::find($id);
+    }
 }

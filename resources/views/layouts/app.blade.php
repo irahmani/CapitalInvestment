@@ -54,7 +54,7 @@
                         <a href="/companies"> <i class="menu-icon fa fa-home"></i>Companies </a>
                     </li>
                     <li >
-                        <a href="index.html"> <i class="menu-icon fa fa-user"></i>Persons </a>
+                        <a href="/shareholders"> <i class="menu-icon fa fa-user"></i>Shareholders </a>
                     </li>
 
                     <h3 class="menu-title">Analysis</h3><!-- /.menu-title -->
@@ -70,7 +70,7 @@
                     </li>
 
                     <li >
-                        <a href="index.html"> <i class="menu-icon fa fa-adjust"></i>Person capitals </a>
+                        <a href="index.html"> <i class="menu-icon fa fa-adjust"></i>Shareholder capitals </a>
                     </li>
 
 
