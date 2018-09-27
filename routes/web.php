@@ -13,8 +13,8 @@
 
 Route::resource('companies','CompanyController');
 Route::resource('shareholders','ShareholderController');
-
-Route::get('login', ['as' => 'login', 'uses' => 'auth\LoginController@getView']);
+Route::resource('shares','ShareController');
+Route::get('/shares/create/{id}', 'CompanyController@addshares');
 
 Route::get('/', function () {
     return view('home');

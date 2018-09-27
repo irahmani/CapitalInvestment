@@ -5,7 +5,7 @@ namespace App\Repositories;
 use App\Models\Share;
 use App\Interfaces\ShareInterface;
 
-class ShareRepoistory implements ShareInterface {
+class ShareRepository implements ShareInterface {
     public function getAll() {
         return Share::all();
     }

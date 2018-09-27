@@ -6,7 +6,37 @@
       <div class="card-body card-block">
          <form method="post" action="{{url('companies')}}" enctype="multipart/form-data">
             @csrf
-            <div class="form-group"><label for="name" class=" form-control-label">Company</label><input type="text" id="name" placeholder="Enter your company name" name="name" class="form-control"></div>
+            <div class="form-group">
+                <label for="name" class=" form-control-label">Company</label>
+                <input type="text" id="name" placeholder="Enter your company name" name="name" class="form-control">
+            </div>
+            <div class="form-group">
+                    <label for="owner_type" class=" form-control-label">Owner type</label>
+                    <select id="owner_type" name="owner_type" class="form-control">
+                        @foreach($ownertypes as $key => $ownertype)
+                            <option value="{{ $key }}">{{ $ownertype }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="form-group company" style="display:none;">
+                        <label for="owner" class=" form-control-label">Company owner</label>
+                        <select id="owners" class="form-control">
+                            @foreach($companies as $company)
+                                <option value="{{ $company['id'] }}">{{ $company['name'] }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+            <div class="form-group person">
+                    <label for="owner" class=" form-control-label">Company owner</label>
+                    <select id="owners" name="owner_id" class="form-control">
+                        @foreach($persons as $person)
+                            <option value="{{ $person['id'] }}">{{ $person['firstname'] }} {{ $person['lastname'] }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+
             <div class="row form-group">
                <div class="col-5">
                   <div class="form-group">
@@ -55,4 +85,10 @@
       </div>
    </div>
 </div>
+<script>
+
+//TODO: Trigger onChange event of Selectbox Company Owner type
+// TODO: show/hide Persons and Companies select boxes based on the type of owner selected
+
+</script>
 @endsection

@@ -21,4 +21,8 @@ class ShareholderRepository implements ShareholderInterface {
     public function find($id) {
         return Shareholder::find($id);
     }
+
+    public function totalCapital($id) {
+        return Shareholder::find($id);
+    }
 }

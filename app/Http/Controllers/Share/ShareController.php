@@ -50,7 +50,7 @@ class ShareController extends Controller {
      */
     public function store(Request $request) {
         $this->shares->create($request->all());
-        return redirect('/shares');
+        return redirect('/companies');
     }
     /**
      * Display an Share
