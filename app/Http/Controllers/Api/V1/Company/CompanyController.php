@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -30,16 +30,10 @@ class CompanyController extends Controller {
      */
     public function index() {
         $companies = $this->companies->getAll();
+
         return view('companies.index', compact('companies'));
     }
-    /**
-     * Display a form to create a new Company.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create() {
-        return view('companies.create');
-    }
+
     /**
      * Create a new Company.
      *
@@ -60,17 +54,7 @@ class CompanyController extends Controller {
         $Company = $this->companies->find($id);
         return view('companies.show', compact('Company'));
     }
-    /**
-     * Display a form to edit an Company.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id) {
-        return $id;
-        $Company = $this->companies->find($id);
-        return view('companies.edit', compact('Company'));
-    }
+
     /**
      * Update an Company.
      *

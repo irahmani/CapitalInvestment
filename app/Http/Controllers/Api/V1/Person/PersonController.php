@@ -1,13 +1,15 @@
 <?php
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
+
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Models\Person;
 use App\Repositories\PersonRepository;
+
 class PersonController extends Controller {
     /**
      * The Person repository instance
-     * 
+     *
      * @var PersonRepository
      */
     protected $persons;
@@ -48,7 +50,7 @@ class PersonController extends Controller {
     }
     /**
      * Display an Person
-     * 
+     *
      * @param type $id
      * @return type
      */
@@ -79,7 +81,7 @@ class PersonController extends Controller {
     }
     /**
      * Delete an Person
-     * 
+     *
      * @param type $id
      * @return \Illuminate\Http\Response
      */

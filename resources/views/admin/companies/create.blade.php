@@ -26,7 +26,14 @@
 </div>
 </div>
 
-                        <div class="form-group"><label for="street" class="form-control-label">Street</label><input type="text" name="street" id="street" placeholder="Enter street name" class="form-control"></div>
+                        <div class="form-group">
+                            <label for="street" class="form-control-label">Street</label>
+                            <input type="text" name="street" id="street" placeholder="Enter street name" class="form-control">
+                        </div>
+
+
+
+
                         <div class="row form-group">
                           <div class="col-5">
                             <div class="form-group"><label for="city" class=" form-control-label">City</label><input type="text" name="city" id="city" placeholder="Enter your city" class="form-control"></div>
@@ -36,7 +43,10 @@
                           </div>
                         </div>
                         <div class="form-group"><label for="country" class=" form-control-label">Country</label><input type="text" id="country" name="country" placeholder="Country name" class="form-control"></div>
-
+                        <div class="form-group">
+                                <label for="ownertype" class="form-control-label">Owner type</label>
+                                <input type="text" name="street" id="owner_type" class="form-control">
+                            </div>
 
 
           <div class="form-group">

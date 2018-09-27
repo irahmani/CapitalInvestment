@@ -7,11 +7,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Capital Investment</title>
-    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
@@ -24,13 +24,11 @@
     <link href="/assets/css/lib/vector-map/jqvmap.min.css" rel="stylesheet">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
-
 </head>
 <body id="app-layout">
-        <!-- Left Panel -->
+    <div id="app">
 
+    <!-- Left Panel -->
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
 
@@ -85,8 +83,8 @@
 
 <!-- Header-->
 <header id="header" class="header">
-
     <div class="header-menu">
+
         <div class="col-sm-7">
             <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
         </div>
@@ -105,22 +103,25 @@
 
 
         </div>
+
     </div>
 
 </header><!-- /header -->
 <!-- Header-->
 <div class="content mt-3">
-
-<div class="col-sm-12">
-    @yield('content')
-</div>
+        @yield('content')
 </div>
 
- <script src="/assets/js/vendor/jquery-2.1.4.min.js"></script>
+    </div>
+</div>
+
+    <script src="/assets/js/vendor/jquery-2.1.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <script src="/assets/js/plugins.js"></script>
     <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/dashboard.js"></script>
-    <script src="/assets/js/widgets.js"></script>
+
+    <script src="{{ ('js/app.js') }}"></script>
+
+
 </body>
 </html>

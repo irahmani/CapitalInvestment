@@ -15,22 +15,24 @@ class CreateCompaniesTable extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('owner_id');
+            $table->enum('owner_type', ['Company', 'Person']);
             $table->string('name');
-            $table->string('street')->nullable();;
-            $table->string('city')->nullable();;
-            $table->string('postalcode')->nullable();;
-            $table->string('country')->nullable();;
-            $table->string('vat')->nullable();;
+            $table->string('street')->nullable();
+            $table->string('city')->nullable();
+            $table->string('postalcode')->nullable();
+            $table->string('country')->nullable();
+            $table->string('vat')->nullable();
             $table->string('logo');
-            $table->float('capital');
-            $table->integer('shares')->nullable();;
+            $table->float('capital', 10, 2);
+            $table->integer('shares')->nullable();
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     *
+     *s
      * @return void
      */
     public function down()

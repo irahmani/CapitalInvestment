@@ -15,6 +15,7 @@ class CreateSharesTable extends Migration
     {
         Schema::create('shares', function (Blueprint $table) {
             $table->increments('id');
+            $table->enum('shareholder_type', ['Company', 'Person']);
             $table->integer('person_id');
             $table->integer('company_id');
             $table->integer('share');
